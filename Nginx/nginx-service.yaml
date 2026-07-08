@@ -15,4 +15,4 @@ spec:
   # traffic to.
   selector:
     app: nginx
-  type: ClusterIP
+  type: NodePort
