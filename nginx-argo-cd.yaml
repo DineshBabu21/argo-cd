@@ -1,13 +1,13 @@
-apiVersion: argoproj.io/alphav1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
     name: nginx-demo
-    namespace: demo
+    namespace: argocd
 spec:
-    project: deafult
-    repo:
+    project: default
+    source:
         repoURL: https://github.com/DineshBabu21/argo-cd.git
-        revision: HEAD
+        targetRevision: HEAD
         path: Nginx
     destination:
         server: https://kubernetes.default.svc
