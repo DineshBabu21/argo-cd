@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/alphav1
+kind: Application
+metadata:
+    name: nginx-demo
+    namespace: demo
+spec:
+    project: deafult
+    repo:
+        repoURL: https://github.com/DineshBabu21/argo-cd.git
+        revision: HEAD
+        path: Nginx
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: demo
