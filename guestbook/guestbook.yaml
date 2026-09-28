@@ -3,10 +3,10 @@ kind: Application
 metadata:
   name: guestbook
   namespace: argocd
-specs:
+spec:
   project: default
   source:
-    repoURL: https://github.com/DineshBabu21/argo-cd.git
+    repoURL: https://github.com/DineshBabu21/argocd-example-apps.git
     targetRevision: HEAD
     path: guestbook
   destination:
